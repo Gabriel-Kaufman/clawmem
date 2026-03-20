@@ -1,6 +1,6 @@
 {
-  "name": "clawmemory",
-  "version": "1.0.0",
+  "name": "@gkauf27/clawmemory",
+  "version": "1.1.0",
   "description": "Persistent typed memory for AI agents. Gets smarter over time, not just more informed.",
   "type": "module",
   "main": "server.js",
