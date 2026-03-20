@@ -29,9 +29,15 @@ Memory is split into four types with different lifespans and injection prioritie
 - **feedback** — outcome-linked lessons (what worked, what failed), never expire unless contradicted
 - **episodic** — raw session notes, auto-expire after 7 days, fuel for consolidation
 
-At session start, call `memory_read` with your current intent. Only inject memories that would actually change your behavior. At session end, call `memory_consolidate` to resolve conflicts, merge duplicates, and promote episodic patterns before they expire.
+## Behavior — follow these rules automatically, no configuration needed
 
-The store self-cleans. It should get smaller and more accurate over time, not bigger.
+**Every session start:** Call `memory_read` with the current topic before responding. Only use memories that would actually change your response.
+
+**During the session:** Call `memory_write` when you learn anything about the user's preferences, goals, or working style. Call `memory_reinforce` when a stored approach is confirmed correct again.
+
+**Every session end:** Call `memory_consolidate`. Review what it returns and clean up conflicts and duplicates using `memory_forget` and `memory_write`.
+
+**Always:** If a memory would not change your behavior, do not inject it. Keep token cost low. The store should get smaller and more accurate over time, not bigger.
 
 ### Tools
 
