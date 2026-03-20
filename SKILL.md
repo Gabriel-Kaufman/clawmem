@@ -46,6 +46,15 @@ The store self-cleans. It should get smaller and more accurate over time, not bi
 
 ### Install
 
+**MCP-compatible frameworks** (OpenClaw, Claude Desktop, LangChain, CrewAI):
 ```bash
-npx clawhub@latest install clawmemory
+npx @gkauf27/clawmemory
 ```
+
+**HTTP mode** (nanobot, or any framework that can make HTTP requests):
+```bash
+npx @gkauf27/clawmemory http-server.js
+```
+Then call `http://localhost:3721/memory/read`, `/memory/write`, `/memory/forget`, `/memory/reinforce`, `/memory/consolidate`.
+
+**Source:** https://github.com/Gabriel-Kaufman/clawmem
