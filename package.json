@@ -1,0 +1,26 @@
+{
+  "name": "clawmemory",
+  "version": "1.0.0",
+  "description": "Persistent typed memory for AI agents. Gets smarter over time, not just more informed.",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "clawmemory": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["mcp", "memory", "openclaw", "agent", "clawhub"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gabriel-Kaufman/clawmem.git"
+  },
+  "homepage": "https://github.com/Gabriel-Kaufman/clawmem#readme",
+  "bugs": {
+    "url": "https://github.com/Gabriel-Kaufman/clawmem/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
